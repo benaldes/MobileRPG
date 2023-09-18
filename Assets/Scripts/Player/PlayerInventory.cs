@@ -13,4 +13,8 @@ public class PlayerInventory : MonoBehaviour
 
 
     public List<Unit> GetUnitsList { get { return inventory.GetUnitsList; } }
+    public void AddUnitToInventory(Unit unit)
+    {
+        inventory.AddUnits(unit);
+    }
 }

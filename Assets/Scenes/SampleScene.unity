@@ -2586,11 +2586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76cebfa01db07ba44bc25e65ae1b9aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   combatSpots:
   - {fileID: 1319881060}
   - {fileID: 2060707702}
@@ -2606,7 +2601,6 @@ GameObject:
   m_Component:
   - component: {fileID: 747135141}
   - component: {fileID: 747135139}
-  - component: {fileID: 747135140}
   m_Layer: 0
   m_Name: CombatCamera
   m_TagString: Untagged
@@ -2665,14 +2659,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &747135140
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747135138}
-  m_Enabled: 1
 --- !u!4 &747135141
 Transform:
   m_ObjectHideFlags: 0
@@ -3040,11 +3026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76cebfa01db07ba44bc25e65ae1b9aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitImages:
-  - {fileID: 1336706627}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   combatSpots:
   - {fileID: 1862076524}
   - {fileID: 2123185186}

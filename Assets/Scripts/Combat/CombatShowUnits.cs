@@ -7,12 +7,12 @@ using UnityEngine.UI;
 
 public class CombatShowUnits : MonoBehaviour
 {
-    [SerializeField] private Image[] unitImages = new Image[4];
     [SerializeField] private List<CombatSpot> combatSpots;
 
     
     public void SetUnitSprite(List<Unit> CombatUnits)
     {
+        Debug.Log("Start");
         int i = 0;
         foreach (Unit unit in CombatUnits)
         {
@@ -20,13 +20,6 @@ public class CombatShowUnits : MonoBehaviour
             i++;
         }
     }
-    [ContextMenu("Set unit Sprite null")]
-    public void CleanSprite()
-    {
-        foreach (Image x in unitImages)
-        {
-            x.sprite = null;
-        }
-    }
+
 
 }

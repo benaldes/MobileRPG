@@ -13,14 +13,17 @@ public class Combat : MonoBehaviour
     [SerializeField] private CombatShowUnits enemyUnitsShow;
     private void OnEnable()
     {
+        
         State = CombatState.Start;
         StartCoroutine(BattleStart());
     }
     IEnumerator BattleStart()
     {
+        yield return new WaitForSeconds(0.01f);
         ///Code for fight Start///
         SetUnitsSprite();
         yield return new WaitForSeconds(2);
+        
         State = CombatState.PlayerTurn;
         PlayerTurn();
     }
@@ -28,6 +31,7 @@ public class Combat : MonoBehaviour
     private void SetUnitsSprite()
     {
         playerUnitsShow.SetUnitSprite(PlayerInventory.Instance.GetUnitsList);
+        
         enemyUnitsShow.SetUnitSprite(enemyUnitList);
     }
     
