@@ -5,8 +5,8 @@ public class Unit
 {
     [SerializeField] private BaseUnit baseUnit;
     [SerializeField] private int level;
-    private int hp;
-    private int speed;
+    [SerializeField] private int hp;
+    [SerializeField] private int speed;
 
     
     public Unit(BaseUnit unit, int level)
@@ -16,6 +16,13 @@ public class Unit
         this.hp = MaxHp;
         this.speed = MaxSpeed;
     }
+    
+    public void initializeUnit()
+    {
+        this.hp = MaxHp;
+        this.speed = MaxSpeed;
+    }
+
     public string Name { get { return baseUnit.Name; } }
     public string Description { get { return baseUnit.Description; } }
     public Sprite Sprite { get { return baseUnit.Sprite; } }
@@ -39,6 +46,8 @@ public class Unit
         }
         return listOfMoves;
     }
+    
+
 }
 [System.Serializable]
 public class MovesToUse
@@ -47,3 +56,4 @@ public class MovesToUse
     [SerializeField] private int levelToUnlock;
     public int LevelToUnlock { get { return levelToUnlock; } }
 }
+

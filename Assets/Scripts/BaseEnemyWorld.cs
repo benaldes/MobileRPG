@@ -13,4 +13,12 @@ public  class BaseEnemyWorld : MonoBehaviour
         }
 
     }
+ 
+    private void Awake()
+    {
+        foreach (var unit in enemyUnitList)
+        {
+            unit.initializeUnit();
+        }
+    }
 }

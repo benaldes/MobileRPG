@@ -9,12 +9,16 @@ public class PlayerInventory : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        foreach (var unit in GetUnitsList)
+        {
+            unit.initializeUnit();
+        }
     }
-
-
+    
     public List<Unit> GetUnitsList { get { return inventory.GetUnitsList; } }
     public void AddUnitToInventory(Unit unit)
     {
+        unit.initializeUnit();
         inventory.AddUnits(unit);
     }
 }

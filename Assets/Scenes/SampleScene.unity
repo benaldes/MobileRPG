@@ -9652,7 +9652,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.062193394, y: -0.23633862}
+  m_Offset: {x: -0.02654457, y: -0.23633862}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -9663,7 +9663,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6219425, y: 2.3682761}
+  m_Size: {x: 1.6932402, y: 2.3682761}
   m_EdgeRadius: 0
 --- !u!4 &2089237595
 Transform:
@@ -9696,8 +9696,12 @@ MonoBehaviour:
   enemyUnitList:
   - baseUnit: {fileID: 11400000, guid: d564a39fec73d5e47a7dd2f4e5f6f2b0, type: 2}
     level: 3
+    hp: 0
+    speed: 0
   - baseUnit: {fileID: 11400000, guid: d564a39fec73d5e47a7dd2f4e5f6f2b0, type: 2}
     level: 3
+    hp: 0
+    speed: 0
 --- !u!1 &2093992604
 GameObject:
   m_ObjectHideFlags: 0
@@ -9973,8 +9977,12 @@ MonoBehaviour:
   enemyUnitList:
   - baseUnit: {fileID: 11400000, guid: e1c8d56be7b89f742a49495a99618806, type: 2}
     level: 3
+    hp: 0
+    speed: 0
   - baseUnit: {fileID: 11400000, guid: e1c8d56be7b89f742a49495a99618806, type: 2}
     level: 3
+    hp: 0
+    speed: 0
 --- !u!61 &2132074954
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10007,7 +10015,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.062193394, y: -0.23633862}
+  m_Offset: {x: -0.014661908, y: -0.022446632}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -10018,7 +10026,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6219425, y: 2.3682761}
+  m_Size: {x: 1.3367531, y: 1.9404922}
   m_EdgeRadius: 0
 --- !u!4 &2132074955
 Transform:
