@@ -9,23 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65269b3c387ccc54aa66eca613420899, type: 3}
+  m_Script: {fileID: 11500000, guid: 7794142e0b3de554883e322dead438cd, type: 3}
   m_Name: Mole
   m_EditorClassIdentifier: 
   _name: Mole
-  description: Mole boy
-  level: 0
+  description: Mole men
   sprite: {fileID: 21300000, guid: 7cefe9e9e8c984bbd9ff43235be8f54f, type: 3}
-  hp: 8
-  maxHp: 10
-  attack: 2
-  dodge: 5
-  accuracy: 5
-  speed: 6
-  maxSpeed: 10
+  maxHp: 8
+  attack: 3
+  dodge: 4
+  accuracy: 3
+  maxSpeed: 8
   unitType: 0
   moves:
   - moves: {fileID: 11400000, guid: b12941703201f664596fb986dfccb1cf, type: 2}
     levelToUnlock: 0
   - moves: {fileID: 11400000, guid: ffb953dcf4dd70246b7c54002250d7ad, type: 2}
-    levelToUnlock: 5
+    levelToUnlock: 2

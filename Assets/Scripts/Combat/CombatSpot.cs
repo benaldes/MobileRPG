@@ -19,8 +19,8 @@ public class CombatSpot : MonoBehaviour
         spot.SetActive(true);
         unitImage.enabled = true;
         unitImage.sprite = unit.Sprite;
-        SetHpBar(unit.HP,unit.MaxHp);
-        SetSpeedBar(unit.Speed,unit.MaxSpeed);
+        SetHpBar(unit.MaxHp,unit.MaxHp);
+        SetSpeedBar(unit.MaxSpeed,unit.MaxSpeed);
         _name.text = unit.Name;
 
     }

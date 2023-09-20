@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -6,11 +7,12 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public Gamestate gamestate;
     public static event Action<Gamestate> OnGameStateChanged;
-    public static EnemyAbstract Enemy;
+    private static List<Unit> enemyunitList;
     private void Awake()
     {
         Instance = this;
     }
+    public List<Unit> EnemyUnitList { get { return enemyunitList; } }
     public void SetState(Gamestate newgamestate)
     {
         gamestate = newgamestate;
@@ -24,7 +26,7 @@ public class GameManager : MonoBehaviour
         }
         OnGameStateChanged?.Invoke(gamestate);
     }
-    public void SetState(Gamestate newgamestate, EnemyAbstract enemy)
+    public void SetState(Gamestate newgamestate, List<Unit> enemyUnitList)
     {
         gamestate = newgamestate;
 
@@ -33,7 +35,7 @@ public class GameManager : MonoBehaviour
             case Gamestate.exploration:
                 break;
             case Gamestate.Combat:
-                Enemy = enemy;
+                enemyunitList = enemyUnitList;
                 break;
         }
         OnGameStateChanged?.Invoke(gamestate);

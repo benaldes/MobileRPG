@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CombatShowUnits : MonoBehaviour
+public class CombatSpotManager : MonoBehaviour
 {
     [SerializeField] private List<CombatSpot> combatSpots;
 
