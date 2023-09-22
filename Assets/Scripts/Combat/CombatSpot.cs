@@ -34,4 +34,12 @@ public class CombatSpot : MonoBehaviour
         float normalizeSpeed = Mathf.InverseLerp(0, maxSpeed, speed);
         SpeedBar.transform.localScale = new Vector3(normalizeSpeed, 1f);
     }
+    public void ClearSpot()
+    {
+        spot.SetActive (false);
+        
+    }
+        
+
+    
 }

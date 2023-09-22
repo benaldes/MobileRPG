@@ -8,7 +8,7 @@ public class Unit
     [SerializeField] private int hp;
     [SerializeField] private int speed;
 
-    
+
     public Unit(BaseUnit unit, int level)
     {
         this.baseUnit = unit;
@@ -16,7 +16,7 @@ public class Unit
         this.hp = MaxHp;
         this.speed = MaxSpeed;
     }
-    
+
     public void initializeUnit()
     {
         this.hp = MaxHp;
@@ -28,7 +28,7 @@ public class Unit
     public Sprite Sprite { get { return baseUnit.Sprite; } }
     public int Level { get { return level; } }
     public int MaxHp { get { return Mathf.FloorToInt(baseUnit.MaxHp + (baseUnit.MaxHp * 0.1f) * level); } }
-    public int HP { get { return hp; } }
+    public int HP { get { return hp; } set { hp = value; } }
     public int MaxSpeed { get { return Mathf.FloorToInt(baseUnit.MaxSpeed + (baseUnit.MaxSpeed * 0.1f) * level); ; } }
     public int Speed { get { return speed; } }
     public int Attack { get { return Mathf.FloorToInt(baseUnit.Attack + (baseUnit.Attack * 0.1f) * level); } }
@@ -36,6 +36,7 @@ public class Unit
     public int Accuracy { get { return Mathf.FloorToInt(baseUnit.Accuracy + (baseUnit.Accuracy * 0.1f) * level); } }
     public UnitType UnitType { get { return baseUnit.UnitType; } }
     public List<MovesToUse> Moves { get { return baseUnit.Moves; } }
+
     public List<MovesToUse> GetUseableMoves()
     {
         List<MovesToUse> listOfMoves = new List<MovesToUse>(Moves);
@@ -46,7 +47,18 @@ public class Unit
         }
         return listOfMoves;
     }
-    
+    public bool TakeDmgAndCheckIfDead(int dmg)
+    {
+        HP -= dmg;
+        if (HP <= 0)
+        { 
+            HP = 0;
+            return true;
+        }
+        return false;
+
+    }
+
 
 }
 [System.Serializable]

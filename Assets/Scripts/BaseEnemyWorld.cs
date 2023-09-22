@@ -10,6 +10,7 @@ public  class BaseEnemyWorld : MonoBehaviour
         if (collision.collider.tag == "Player")
         {
             GameManager.Instance.SetState(Gamestate.Combat, enemyUnitList);
+            Destroy(gameObject);
         }
 
     }

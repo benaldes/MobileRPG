@@ -12,7 +12,10 @@ public class CombatSpotManager : MonoBehaviour
     
     public void SetUnitSprite(List<Unit> CombatUnits)
     {
-        Debug.Log("Start");
+        foreach(CombatSpot spot in combatSpots)
+        {
+            spot.ClearSpot();
+        }
         int i = 0;
         foreach (Unit unit in CombatUnits)
         {
@@ -20,6 +23,7 @@ public class CombatSpotManager : MonoBehaviour
             i++;
         }
     }
+  
 
 
 }

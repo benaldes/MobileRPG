@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Mole men
   sprite: {fileID: 21300000, guid: 7cefe9e9e8c984bbd9ff43235be8f54f, type: 3}
   maxHp: 8
-  attack: 3
+  attack: 10
   dodge: 4
   accuracy: 3
   maxSpeed: 8
